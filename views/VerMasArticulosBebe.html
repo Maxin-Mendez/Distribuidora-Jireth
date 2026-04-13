@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/FiltradoTexto.css">
+    <title>Distribuidora Jireh</title>
+</head>
+
+<body>
+    <!--HEADER-->
+    <header>
+        <!--Logo Jireh-->
+        <div class="logo">
+            <img src="../images/Iconos/Logo.png" alt="logo Jireh" class="logo-img" />
+        </div>
+        <!--Barra Busqueda-->
+        <form>
+            <div class="search">
+                <span><img src="../images/Iconos/search.png" alt="Imagen Busqueda" /></span>
+                <input id="search-input" class="search-input" type="search" placeholder="Buscar">
+            </div>
+        </form>
+        <!--Links del Header-->
+        <nav class="header-nav">
+            <a href="./Index.html" class="header-link">Inicio</a>
+            <a href="./AcercaDe.html" class="header-link">Acerca de</a>
+            <a href="./Contactanos.html" class="header-link">Contáctanos</a>
+            <a href="./Login.html" class="header-link">Iniciar Sesión</a>
+            <a href="javascript:void(0)" id="favoritos-icon">
+                <img src="../images/Iconos/heart.png" alt="corazon-icon" />
+            </a>
+            <a href="javascript:void(0)" id="carrito-icon">
+                <img src="../images/Iconos/cart.png" alt="carrito-compras-icon" />
+            </a>
+            <a href="javascript:void(0)" id="usuario-icono">
+                <img src="../images/Iconos/user.png" alt="user-icon" />
+            </a>
+            <div id="usuario-info" class="usuario-info oculto">
+                <span id="usuario-texto"></span>
+                <button id="cerrar-usuario-info" class="cerrar-btn">&times;</button>
+            </div>
+        </nav>
+    </header>
+
+    <!--BOTONES CATEGORÍAS-->
+    <div class="category-menu">
+        <button class="category" onclick="navegarConLoader('../views/Index.html')">Alimentos <img
+                src="../images/Iconos/down-arrow.png" /></button>
+        <button class="category" onclick="navegarConLoader('../views/Bebidas.html')">Bebidas <img
+                src="../images/Iconos/down-arrow.png" /></button>
+        <button class="category" onclick="navegarConLoader('../views/ProductosLimpieza.html')">Productos de Limpieza
+            <img src="../images/Iconos/down-arrow.png" /></button>
+        <button class="category" onclick="navegarConLoader('../views/CuidadoPersonal.html')">Cuidado Personal <img
+                src="../images/Iconos/down-arrow.png" /></button>
+        <button class="category" onclick="navegarConLoader('../views/ProductosBasicos.html')">Productos Básicos <img
+                src="../images/Iconos/down-arrow.png" /></button>
+        <button class="category" onclick="navegarConLoader('../views/ProductosHogar.html')">Productos para el Hogar <img
+                src="../images/Iconos/down-arrow.png" /></button>
+        <button class="category" onclick="navegarConLoader('../views/Salud.html')">Salud <img
+                src="../images/Iconos/down-arrow.png" /></button>
+        <button class="category active" onclick="navegarConLoader('../views/ArticulosBebe.html')">Artículos para Bebés
+            <img src="../images/Iconos/down-arrow.png" /></button>
+    </div>
+
+    <!--BOTON MEJORES OFERTAS (CARRUSEL)-->
+    <section class="carrusel-container">
+        <div class="carrusel-track-wrapper">
+            <div class="carrusel-track">
+                <!--Productos del carrusel-->
+                <div class="carrusel-content">
+                    <div class="text-content">
+                        <p>Mejores Ofertas</p>
+                        <h2>Pañales Pampers Baby-Dry</h2>
+                        <p>A tan solo 25 C$</p>
+                    </div>
+                    <img src="../images/Articulos para bebes/Pampers.png" alt="Pampers" class="product-image" />
+                </div>
+
+                <div class="carrusel-content">
+                    <div class="text-content">
+                        <p>Mejores Ofertas</p>
+                        <h2>Shampoo Mennen Baby Magic Manzanilla 200 ml</h2>
+                        <p>A tan solo 125 C$</p>
+                    </div>
+                    <img src="../images/Articulos para bebes/Shampoo_Mennen_200ml.png" alt="Shampoo_Mennen_200ml"
+                        class="product-image" />
+                </div>
+
+                <div class="carrusel-content">
+                    <div class="text-content">
+                        <p>Mejores Ofertas</p>
+                        <h2>Biberon Evenflo Trit Sea Friends 8Oz</h2>
+                        <p>A tan solo 90 C$</p>
+                    </div>
+                    <img src="../images/Articulos para bebes/Biberon_Evenflo_Trit_Sea_Friends_8Oz-.png" alt="Biberon"
+                        class="product-image" />
+                </div>
+
+                <div class="carrusel-content">
+                    <div class="text-content">
+                        <p>Mejores Ofertas</p>
+                        <h2>Gerber Cereal para Bebés</h2>
+                        <p>A tan solo 150 C$</p>
+                    </div>
+                    <img src="../images/Articulos para bebes/Gerber-Cereal.png" alt="Gerber-Cereal"
+                        class="product-image" />
+                </div>
+
+                <div class="carrusel-content">
+                    <div class="text-content">
+                        <p>Mejores Ofertas</p>
+                        <h2>Colado Gerber Pouch Sabor Banano 100 g</h2>
+                        <p>A tan solo 32 C$</p>
+                    </div>
+                    <img src="../images/Articulos para bebes/Colado_Gerber_Pouch_100g.png"
+                        alt="Colado_Gerber_Pouch_100g" class="product-image" />
+                </div>
+            </div>
+        </div>
+
+        <div class="carrusel-button left">
+            <img src="../images/Iconos/left-chevron.png" />
+        </div>
+        <div class="carrusel-button right">
+            <img src="../images/Iconos/chevron.png" />
+        </div>
+
+        <!--Puntos de la zona inferior del carrusel-->
+        <div class="carrusel-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </section>
+
+    <!--SECTION DE LAS OFERTAS-->
+    <!--PRODUCTOS DESTACADOS PRODUCTOS PARA BEBES-->
+    <section class="destacados">
+        <div class="destacados-header">
+            <h2>Consigue todas las ofertas en artículos para bebés</h2>
+        </div>
+
+        <div class="productos-grid">
+            <div class="producto">
+                <img src="../images/Articulos para bebes/Pampers.png" alt="Pampers">
+                <p class="nombre">Pañales Pampers Baby-Dry</p>
+                <p class="precio">24 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Articulos para bebes/Pañales Kleenbebe.png" alt="Pañales Kleenbebe">
+                <p class="nombre">Pañales KleenBebé Unisex</p>
+                <p class="precio">8 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Articulos para bebes/Toallas Humedas Huggies.png" alt="Toallas Humedas Huggies">
+                <p class="nombre">Toallas Humedas Huggies</p>
+                <p class="precio">70 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Articulos para bebes/Gerber-Cereal.png" alt="Gerber-Cereal">
+                <p class="nombre">Gerber Cereal para Bebés</p>
+                <p class="precio">150 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Articulos para bebes/Toallitas Baby Wipes.png" alt="Toallitas Baby Wipes">
+                <p class="nombre">Toallitas Pampers Baby Wipes</p>
+                <p class="precio">257 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Articulos para bebes/Shampoo_Mennen_200ml.png" alt="Shampoo_Mennen_200ml">
+                <p class="nombre">Shampoo Mennen Baby Magic Manzanilla 200 ml</p>
+                <p class="precio">125 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Articulos para bebes/Biberon_Evenflo_Trit_Sea_Friends_8Oz-.png"
+                    alt="Biberon_Evenflo_Trit_Sea_Friends_8Oz-">
+                <p class="nombre">Biberon Evenflo Trit Sea Friends 8Oz</p>
+                <p class="precio">90 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Articulos para bebes/Pañales_huggies.png" alt="Pañales_huggies">
+                <p class="nombre">Pañales Huggies Active Sec Etapa 3/G 128 Unidades</p>
+                <p class="precio">1080 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Articulos para bebes/Talco_para_bebes.png" alt="Talco_para_bebes">
+                <p class="nombre">Talco para Bebes Mennen Baby Magic Azul 100 g</p>
+                <p class="precio">99 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Articulos para bebes/Shampoo-Ricitos-De-Oro.png" alt="Shampoo-Ricitos-De-Oro">
+                <p class="nombre">Shampoo Ricitos De Oro Bebe Manzanilla 250ml</p>
+                <p class="precio">122 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Articulos para bebes/Nestum_Cereal_Infantil_200g.png"
+                    alt="Nestum_Cereal_Infantil_200g">
+                <p class="nombre">NESTUM Trigo Miel Cereal Infantil Caja 200g</p>
+                <p class="precio">72 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Articulos para bebes/Colado_Agu_Frustas_Mixtas_113g.png"
+                    alt="Colado_Agu_Frustas_Mixtas_113g">
+                <p class="nombre">Colado Agú Súper Amigos Sabor Frutas Mixtas 113 g</p>
+                <p class="precio">25 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Articulos para bebes/Cubiertos_Nuby_2_und.png" alt="Cubiertos_Nuby_2_und">
+                <p class="nombre">Cubiertos Nuby para alimentación de bebé 2 uds</p>
+                <p class="precio">200 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Articulos para bebes/Colado_Gerber_Pouch_100g.png" alt="Colado_Gerber_Pouch_100g">
+                <p class="nombre">Colado Gerber Pouch Sabor Banano 100 g</p>
+                <p class="precio">32 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Articulos para bebes/Mamilas_de_silicon_3_und_parents_choice.png"
+                    alt="Mamilas_de_silicon_3_und_parents_choice">
+                <p class="nombre">3Pk Repuesto Flujo Rapido Parents Choice</p>
+                <p class="precio">60 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Articulos para bebes/Colonia_Risitos_de_Oro.png" alt="Colonia_Risitos_de_Oro">
+                <p class="nombre">Colonia Ricitos De Oro 200Ml</p>
+                <p class="precio">112 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Articulos para bebes/Jabon_Mennen_Baby_Magic.png" alt="Jabon_Mennen_Baby_Magic">
+                <p class="nombre">Jabon Corporal para Bebe Mennen Baby Magic Lavanda y Extracto Avena 90 g</p>
+                <p class="precio">44 C$</p>
+            </div>
+        </div>
+    </section>
+
+    <!--FOOTER-->
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Columna 1 -->
+            <div class="footer-column">
+                <h2>Distribuidora Jireh</h2>
+                <h3>Contáctanos</h3>
+                <p>📱 Whats App<br><span>+502 8182-1278</span></p>
+                <p>📞 Llamanos<br><span>+502 8182-1278</span></p>
+            </div>
+
+            <!-- Columna 2 -->
+            <div class="footer-column">
+                <h3>Categorías Populares</h3>
+                <ul>
+                    <li><a href="./Index.html">Alimentos</a></li>
+                    <li><a href="./Bebidas.html">Bebidas</a></li>
+                    <li><a href="./ProductosLimpieza.html">Productos de Limpieza</a></li>
+                    <li><a href="./CuidadoPersonal.html">Cuidado Personal</a></li>
+                    <li><a href="./ProductosBasicos.html">Productos Básicos</a></li>
+                    <li><a href="./ProductosHogar.html">Productos para el Hogar</a></li>
+                    <li><a href="./Salud.html">Salud</a></li>
+                    <li><a href="./ArticulosBebe.html">Artículos para Bebés</a></li>
+                </ul>
+            </div>
+
+            <!-- Columna 3 -->
+            <div class="footer-column">
+                <h3>Customer Services</h3>
+                <ul>
+                    <li>Contáctanos</li>
+                    <li>Terms & Conditions</li>
+                    <li>FAQ</li>
+                    <li>Privacy Policy</li>
+                    <li>E-waste Policy</li>
+                    <li>Cancellation & Return Policy</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            © 2025 All rights reserved. Reliance Retail Ltd.
+        </div>
+    </footer>
+
+    <!--CARRITO DE COMPRAS-->
+    <div id="carrito-popup" class="carrito-popup oculto">
+        <h3>Carrito</h3>
+        <ul id="carrito-lista" class="carrito-lista"></ul>
+    </div>
+
+    <!--MENSAJE DE PRODUCTO AGREGADO AL CARRITO-->
+    <div id="mensaje-toast" class="toast oculto"></div>
+
+    <!--LOADER (PANTALLA DE CARGA)-->
+    <div id="loader" class="loader oculto">
+        <div class="loader-content">
+            <div class="spinner"></div>
+            <p class="loader-text">Cargando...</p>
+        </div>
+    </div>
+
+    <!--FAVORITOS POPUP-->
+    <div id="favoritos-popup" class="favoritos-popup oculto">
+        <h3>Favoritos</h3>
+        <ul id="favoritos-lista" class="favoritos-lista"></ul>
+    </div>
+
+    <script src="../js/global.js"></script>
+</body>
+
+</html>

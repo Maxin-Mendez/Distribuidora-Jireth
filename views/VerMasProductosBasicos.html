@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/FiltradoTexto.css">
+    <title>Distribuidora Jireh</title>
+</head>
+
+<body>
+    <!--HEADER-->
+    <header>
+        <!--Logo Jireh-->
+        <div class="logo">
+            <img src="../images/Iconos/Logo.png" alt="logo Jireh" class="logo-img" />
+        </div>
+        <!--Barra Busqueda-->
+        <form>
+            <div class="search">
+                <span><img src="../images/Iconos/search.png" alt="Imagen Busqueda" /></span>
+                <input id="search-input" class="search-input" type="search" placeholder="Buscar">
+            </div>
+        </form>
+        <!--Links del Header-->
+        <nav class="header-nav">
+            <a href="./Index.html" class="header-link">Inicio</a>
+            <a href="./AcercaDe.html" class="header-link">Acerca de</a>
+            <a href="./Contactanos.html" class="header-link">Contáctanos</a>
+            <a href="./Login.html" class="header-link">Iniciar Sesión</a>
+            <a href="javascript:void(0)" id="favoritos-icon">
+                <img src="../images/Iconos/heart.png" alt="corazon-icon" />
+            </a>
+            <a href="javascript:void(0)" id="carrito-icon">
+                <img src="../images/Iconos/cart.png" alt="carrito-compras-icon" />
+            </a>
+            <a href="javascript:void(0)" id="usuario-icono">
+                <img src="../images/Iconos/user.png" alt="user-icon" />
+            </a>
+            <div id="usuario-info" class="usuario-info oculto">
+                <span id="usuario-texto"></span>
+                <button id="cerrar-usuario-info" class="cerrar-btn">&times;</button>
+            </div>
+        </nav>
+    </header>
+
+    <!--BOTONES CATEGORÍAS-->
+    <div class="category-menu">
+        <button class="category" onclick="navegarConLoader('../views/Index.html')">Alimentos <img
+                src="../images/Iconos/down-arrow.png" /></button>
+        <button class="category" onclick="navegarConLoader('../views/Bebidas.html')">Bebidas <img
+                src="../images/Iconos/down-arrow.png" /></button>
+        <button class="category" onclick="navegarConLoader('../views/ProductosLimpieza.html')">Productos de Limpieza
+            <img src="../images/Iconos/down-arrow.png" /></button>
+        <button class="category" onclick="navegarConLoader('../views/CuidadoPersonal.html')">Cuidado Personal <img
+                src="../images/Iconos/down-arrow.png" /></button>
+        <button class="category active" onclick="navegarConLoader('../views/ProductosBasicos.html')">Productos Básicos
+            <img src="../images/Iconos/down-arrow.png" /></button>
+        <button class="category" onclick="navegarConLoader('../views/ProductosHogar.html')">Productos para el Hogar <img
+                src="../images/Iconos/down-arrow.png" /></button>
+        <button class="category" onclick="navegarConLoader('../views/Salud.html')">Salud <img
+                src="../images/Iconos/down-arrow.png" /></button>
+        <button class="category" onclick="navegarConLoader('../views/ArticulosBebe.html')">Artículos para Bebés <img
+                src="../images/Iconos/down-arrow.png" /></button>
+    </div>
+
+    <!--BOTON MEJORES OFERTAS (CARRUSEL)-->
+    <section class="carrusel-container">
+        <div class="carrusel-track-wrapper">
+            <div class="carrusel-track">
+                <!--Productos del carrusel-->
+                <div class="carrusel-content">
+                    <div class="text-content">
+                        <p>Mejores Ofertas</p>
+                        <h2>Cereal Corn Flakes Kellogs 370gr</h2>
+                        <p>A tan solo 166 C$</p>
+                    </div>
+                    <img src="../images/Productos Basicos/Cereal-Corn-Flakes-Kellogs.png"
+                        alt="Cereal-Corn-Flakes-Kellogs" class="product-image" />
+                </div>
+
+                <div class="carrusel-content">
+                    <div class="text-content">
+                        <p>Mejores Ofertas</p>
+                        <h2>Sopa Maggi Sabor Pollo Fideos</h2>
+                        <p>A tan solo 16 C$</p>
+                    </div>
+                    <img src="../images/Productos Basicos/Maggi_Consome_de_Pollo.png" alt="Maggi_Consome_de_Pollo"
+                        class="product-image" />
+                </div>
+
+                <div class="carrusel-content">
+                    <div class="text-content">
+                        <p>Mejores Ofertas</p>
+                        <h2>Ketchup Naturas 385gr</h2>
+                        <p>A tan solo 60 C$</p>
+                    </div>
+                    <img src="../images/Productos Basicos/Salsa_Tomate_Naturas.png" alt="Salsa_Tomate_Naturas"
+                        class="product-image" />
+                </div>
+
+                <div class="carrusel-content">
+                    <div class="text-content">
+                        <p>Mejores Ofertas</p>
+                        <h2>Maizena Atole Vainilla 45g</h2>
+                        <p>A tan solo 25 C$</p>
+                    </div>
+                    <img src="../images/Productos Basicos/Maizena-Vainilla.png" alt="Maizena-Vainilla"
+                        class="product-image" />
+                </div>
+
+                <div class="carrusel-content">
+                    <div class="text-content">
+                        <p>Mejores Ofertas</p>
+                        <h2>Arroz Blanco Doña Maria 1Lb</h2>
+                        <p>A tan solo 23 C$</p>
+                    </div>
+                    <img src="../images/Productos Basicos/Arroz_Doña_Maria.png" alt="Arroz_Doña_Maria"
+                        class="product-image" />
+                </div>
+            </div>
+        </div>
+
+        <div class="carrusel-button left">
+            <img src="../images/Iconos/left-chevron.png" />
+        </div>
+        <div class="carrusel-button right">
+            <img src="../images/Iconos/chevron.png" />
+        </div>
+
+        <!--Puntos de la zona inferior del carrusel-->
+        <div class="carrusel-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </section>
+
+    <!--SECTION DE LAS OFERTAS-->
+    <!--PRODUCTOS DESTACADOS PRODUCTOS DE PRODUCTOS BASICOS-->
+    <section class="destacados">
+        <div class="destacados-header">
+            <h2>Consigue todas las ofertas en productos de productos básicos</h2>
+        </div>
+
+        <div class="productos-grid">
+            <div class="producto">
+                <img src="../images/Productos Basicos/Sopa_Magi.png" alt="Sopa_Magi">
+                <p class="nombre">Sopa Maggi Pollo Fideos</p>
+                <p class="precio">16 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Productos Basicos/Aceite_Mazola.png" alt="Aceite_Mazola">
+                <p class="nombre">Aceite Mazola 400ml</p>
+                <p class="precio">60 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Productos Basicos/Salsa_Tomate_Naturas.png" alt="Salsa_Tomate_Naturas">
+                <p class="nombre">Ketchup Naturas 385gr</p>
+                <p class="precio">60 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Productos Basicos/Harina_Trigo_Gemina.png" alt="Harina_Trigo_Gemina">
+                <p class="nombre">Harina de Trigo Gemina</p>
+                <p class="precio">25 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Productos Basicos/Cafe_Presto.png" alt="Cafe_Presto">
+                <p class="nombre">Café Presto 2g</p>
+                <p class="precio">4 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Productos Basicos/Sopa_Magi.png" alt="Sopa_Magi">
+                <p class="nombre">Sopa Maggi Sabor Pollo Fideos</p>
+                <p class="precio">16 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Productos Basicos/Maggi-Costilla.png" alt="Maggi-Costilla">
+                <p class="nombre">Sopa Maggi Sabor Costilla</p>
+                <p class="precio">16 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Productos Basicos/Maizena-Vainilla.png" alt="Maizena-Vainilla">
+                <p class="nombre">Maizena Atole Vainilla 45g</p>
+                <p class="precio">25 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Productos Basicos/Cafe_Seda.png" alt="Cafe_Seda">
+                <p class="nombre">Cafe Seda Unidad</p>
+                <p class="precio">3 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Productos Basicos/Cafe1820.png" alt="Cafe1820">
+                <p class="nombre">Cafe 1820 Unidad</p>
+                <p class="precio">4 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Productos Basicos/Maggi_Sazonado.png" alt="Maggi_Sazonado">
+                <p class="nombre">Sazonador Completo Maggi</p>
+                <p class="precio">6 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Productos Basicos/Maggi_Mi_sazon.png" alt="Maggi_Mi_sazon">
+                <p class="nombre">Maggi Consomé Mi Sazon</p>
+                <p class="precio">6 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Productos Basicos/Maggi_Consome_de_Pollo.png" alt="Maggi_Consome_de_Pollo">
+                <p class="nombre">Maggi Consomé de Pollo</p>
+                <p class="precio">6 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Productos Basicos/Aceite_Mazola.png" alt="Aceite_Mazola">
+                <p class="nombre">Aceite Mazola 400ml</p>
+                <p class="precio">60 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Productos Basicos/Esencia_de_Frambuesa- Mama Gollita.png"
+                    alt="Esencia_de_Frambuesa-">
+                <p class="nombre">Frambuesa Procasa 170g</p>
+                <p class="precio">30 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Productos Basicos/Vinagre-Tinto-Mama Gollita.png" alt="Vinagre-Tinto-Mama">
+                <p class="nombre">Vinagre Tinto Procasa 170g</p>
+                <p class="precio">30 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Productos Basicos/Vinagre-Blanco-Mama Gollita.png" alt="Vinagre-Blanco-Mama">
+                <p class="nombre">Vinagre Blanco Procasa 170g</p>
+                <p class="precio">30 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Productos Basicos/Sal-Atlantida.png" alt="Sal-Atlantida">
+                <p class="nombre">Sal Atlantida Fina Molida y Seca 227g</p>
+                <p class="precio">8 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Productos Basicos/ChimiChurri-El secreto de mama.png" alt="ChimiChurri-El">
+                <p class="nombre">ChimiChurri PG</p>
+                <p class="precio">54 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Productos Basicos/Salsa_de_Ajo-McCormick.png" alt="Salsa_de_Ajo-McCormick">
+                <p class="nombre">Salsa de Ajo Mc-Cormick 148ml</p>
+                <p class="precio">46 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Productos Basicos/Salsa_Barbacoa-Kraft.png" alt="Salsa_Barbacoa-Kraft">
+                <p class="nombre">Salsa Barbacoa PG</p>
+                <p class="precio">54 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Productos Basicos/Salsa-China-McCormick.png" alt="">
+                <p class="nombre">Salsa China McCormick 148ml</p>
+                <p class="precio">70 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Productos Basicos/Salsa_Picante_Don_Julio.png" alt="Salsa_Picante_Don_Julio">
+                <p class="nombre">Salsa Don Julio Picante Chile Rojo 460ml</p>
+                <p class="precio">30 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Productos Basicos/Chile_Lizano.png" alt="Chile_Lizano">
+                <p class="nombre">Salsa Lizano de Chile Picante 62g</p>
+                <p class="precio">32 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Productos Basicos/Arroz_Doña_Maria.png" alt="Arroz_Doña_Maria">
+                <p class="nombre">Arroz Blanco Doña Maria 1Lb</p>
+                <p class="precio">23 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Productos Basicos/Arroz_Faisan.png" alt="Arroz_Faisan">
+                <p class="nombre">Arroz Blanco Faisan 1lb</p>
+                <p class="precio">28 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Productos Basicos/Azucar_Monte_Rosa.png" alt="Azucar_Monte_Rosa">
+                <p class="nombre">Azucar Monte Rosa Sulfitada 2000gr</p>
+                <p class="precio">14 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Productos Basicos/Cereal-Corn-Flakes-Kellogs.png" alt="Cereal-Corn-Flakes-Kellogs">
+                <p class="nombre">Cereal Corn Flakes Kellogs 370gr</p>
+                <p class="precio">166 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Productos Basicos/Maseca_Enchiladas.png" alt="Maseca_Enchiladas">
+                <p class="nombre">Harina Maseca Enchilada C Consume 454gr</p>
+                <p class="precio">250 C$</p>
+            </div>
+    </section>
+
+    <!--FOOTER-->
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Columna 1 -->
+            <div class="footer-column">
+                <h2>Distribuidora Jireh</h2>
+                <h3>Contáctanos</h3>
+                <p>📱 Whats App<br><span>+502 8182-1278</span></p>
+                <p>📞 Llamanos<br><span>+502 8182-1278</span></p>
+            </div>
+
+            <!-- Columna 2 -->
+            <div class="footer-column">
+                <h3>Categorías Populares</h3>
+                <ul>
+                    <li><a href="./Index.html">Alimentos</a></li>
+                    <li><a href="./Bebidas.html">Bebidas</a></li>
+                    <li><a href="./ProductosLimpieza.html">Productos de Limpieza</a></li>
+                    <li><a href="./CuidadoPersonal.html">Cuidado Personal</a></li>
+                    <li><a href="./ProductosBasicos.html">Productos Básicos</a></li>
+                    <li><a href="./ProductosHogar.html">Productos para el Hogar</a></li>
+                    <li><a href="./Salud.html">Salud</a></li>
+                    <li><a href="./ArticulosBebe.html">Artículos para Bebés</a></li>
+                </ul>
+            </div>
+
+            <!-- Columna 3 -->
+            <div class="footer-column">
+                <h3>Customer Services</h3>
+                <ul>
+                    <li>Contáctanos</li>
+                    <li>Terms & Conditions</li>
+                    <li>FAQ</li>
+                    <li>Privacy Policy</li>
+                    <li>E-waste Policy</li>
+                    <li>Cancellation & Return Policy</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            © 2025 All rights reserved. Reliance Retail Ltd.
+        </div>
+    </footer>
+
+    <!--CARRITO DE COMPRAS-->
+    <div id="carrito-popup" class="carrito-popup oculto">
+        <h3>Carrito</h3>
+        <ul id="carrito-lista" class="carrito-lista"></ul>
+    </div>
+
+    <!--MENSAJE DE PRODUCTO AGREGADO AL CARRITO-->
+    <div id="mensaje-toast" class="toast oculto"></div>
+
+    <!--LOADER (PANTALLA DE CARGA)-->
+    <div id="loader" class="loader oculto">
+        <div class="loader-content">
+            <div class="spinner"></div>
+            <p class="loader-text">Cargando...</p>
+        </div>
+    </div>
+
+    <!--FAVORITOS POPUP-->
+    <div id="favoritos-popup" class="favoritos-popup oculto">
+        <h3>Favoritos</h3>
+        <ul id="favoritos-lista" class="favoritos-lista"></ul>
+    </div>
+
+    <script src="../js/global.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/FiltradoTexto.css">
+    <title>Distribuidora Jireh</title>
+</head>
+
+<body>
+    <!--HEADER-->
+    <header>
+        <!--Logo Jireh-->
+        <div class="logo">
+            <img src="../images/Iconos/Logo.png" alt="logo Jireh" class="logo-img" />
+        </div>
+        <!--Barra Busqueda-->
+        <form>
+            <div class="search">
+                <span><img src="../images/Iconos/search.png" alt="Imagen Busqueda" /></span>
+                <input id="search-input" class="search-input" type="search" placeholder="Buscar">
+            </div>
+        </form>
+        <!--Links del Header-->
+        <nav class="header-nav">
+            <a href="./Index.html" class="header-link">Inicio</a>
+            <a href="./AcercaDe.html" class="header-link">Acerca de</a>
+            <a href="./Contactanos.html" class="header-link">Contáctanos</a>
+            <a href="./Login.html" class="header-link">Iniciar Sesión</a>
+            <a href="javascript:void(0)" id="favoritos-icon">
+                <img src="../images/Iconos/heart.png" alt="corazon-icon" />
+            </a>
+            <a href="javascript:void(0)" id="carrito-icon">
+                <img src="../images/Iconos/cart.png" alt="carrito-compras-icon" />
+            </a>
+            <a href="javascript:void(0)" id="usuario-icono">
+                <img src="../images/Iconos/user.png" alt="user-icon" />
+            </a>
+            <div id="usuario-info" class="usuario-info oculto">
+                <span id="usuario-texto"></span>
+                <button id="cerrar-usuario-info" class="cerrar-btn">&times;</button>
+            </div>
+        </nav>
+    </header>
+
+    <!--BOTONES CATEGORÍAS-->
+    <div class="category-menu">
+        <button class="category" onclick="navegarConLoader('../views/Index.html')">Alimentos <img
+                src="../images/Iconos/down-arrow.png" /></button>
+        <button class="category" onclick="navegarConLoader('../views/Bebidas.html')">Bebidas <img
+                src="../images/Iconos/down-arrow.png" /></button>
+        <button class="category" onclick="navegarConLoader('../views/ProductosLimpieza.html')">Productos de Limpieza
+            <img src="../images/Iconos/down-arrow.png" /></button>
+        <button class="category" onclick="navegarConLoader('../views/CuidadoPersonal.html')">Cuidado Personal <img
+                src="../images/Iconos/down-arrow.png" /></button>
+        <button class="category" onclick="navegarConLoader('../views/ProductosBasicos.html')">Productos Básicos <img
+                src="../images/Iconos/down-arrow.png" /></button>
+        <button class="category active" onclick="navegarConLoader('../views/ProductosHogar.html')">Productos para el
+            Hogar <img src="../images/Iconos/down-arrow.png" /></button>
+        <button class="category" onclick="navegarConLoader('../views/Salud.html')">Salud <img
+                src="../images/Iconos/down-arrow.png" /></button>
+        <button class="category" onclick="navegarConLoader('../views/ArticulosBebe.html')">Artículos para Bebés <img
+                src="../images/Iconos/down-arrow.png" /></button>
+    </div>
+
+    <!--BOTON MEJORES OFERTAS (CARRUSEL)-->
+    <section class="carrusel-container">
+        <div class="carrusel-track-wrapper">
+            <div class="carrusel-track">
+                <!--Productos del carrusel-->
+                <div class="carrusel-content">
+                    <div class="text-content">
+                        <p>Mejores Ofertas</p>
+                        <h2>Plagatox Raid</h2>
+                        <p>A tan solo 10 C$</p>
+                    </div>
+                    <img src="../images/Productos para el hogar/Plagatox_Raid.png" alt="Plagatox_Raid"
+                        class="product-image" />
+                </div>
+
+                <div class="carrusel-content">
+                    <div class="text-content">
+                        <p>Mejores Ofertas</p>
+                        <h2>Bolsas TermEncogibles 100unds</h2>
+                        <p>A tan solo 25 C$</p>
+                    </div>
+                    <img src="../images/Productos para el hogar/Bolsas_TermEncogibles.png" alt="Bolsas_TermEncogibles"
+                        class="product-image" />
+                </div>
+
+                <div class="carrusel-content">
+                    <div class="text-content">
+                        <p>Mejores Ofertas</p>
+                        <h2>Candela Grupo Llanes Unidad</h2>
+                        <p>A tan solo 10 C$</p>
+                    </div>
+                    <img src="../images/Productos para el hogar/Candelas_Llanes.png" alt="Candelas_Llanes"
+                        class="product-image" />
+                </div>
+
+                <div class="carrusel-content">
+                    <div class="text-content">
+                        <p>Mejores Ofertas</p>
+                        <h2>Baterias Rayovac AAA 2unds</h2>
+                        <p>A tan solo 31 C$</p>
+                    </div>
+                    <img src="../images/Productos para el hogar/Baterias_Rayovac_AA_2.png" alt="Baterias_Rayovac_AA_2"
+                        class="product-image" />
+                </div>
+
+                <div class="carrusel-content">
+                    <div class="text-content">
+                        <p>Mejores Ofertas</p>
+                        <h2>Probolsa Pequeña</h2>
+                        <p>A tan solo 38 C$</p>
+                    </div>
+                    <img src="../images/Productos para el hogar/Probolsa_Pequeña.png" alt="Probolsa_Pequeña"
+                        class="product-image" />
+                </div>
+            </div>
+        </div>
+
+        <div class="carrusel-button left">
+            <img src="../images/Iconos/left-chevron.png" />
+        </div>
+        <div class="carrusel-button right">
+            <img src="../images/Iconos/chevron.png" />
+        </div>
+
+        <!--Puntos de la zona inferior del carrusel-->
+        <div class="carrusel-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </section>
+
+    <!--SECTION DE LAS OFERTAS-->
+    <!--PRODUCTOS DESTACADOS PRODUCTOS PARA EL HOGAR-->
+    <section class="destacados">
+        <div class="destacados-header">
+            <h2>Consigue todas las ofertas en productos para el hogar</h2>
+        </div>
+
+        <div class="productos-grid">
+            <div class="producto">
+                <img src="../images/Productos para el hogar/Plagatox_Raid.png" alt="Plagatox_Raid">
+                <p class="nombre">Plagatox Raid</p>
+                <p class="precio">10 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Productos para el hogar/Foco_Phillips_Ecohome.png" alt="Foco_Phillips_Ecohome">
+                <p class="nombre">Foco Philips Ecohome</p>
+                <p class="precio">45 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Productos para el hogar/Platos_Desechables_Foampi.png"
+                    alt="Platos_Desechables_Foampi">
+                <p class="nombre">Platos Desechables Foampi</p>
+                <p class="precio">30 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Productos para el hogar/Scroch_Brite.png" alt="Scroch_Brite">
+                <p class="nombre">Espiral Metálico Scotch Brite 2unds</p>
+                <p class="precio">30 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Productos para el hogar/Bolsas_TermEncogibles.png" alt="Bolsas_TermEncogibles">
+                <p class="nombre">Bolsas TermEncogibles 100unds</p>
+                <p class="precio">25 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Productos para el hogar/Candelas_Llanes.png" alt="Candelas_Llanes">
+                <p class="nombre">Candela Grupo Llanes Unidad</p>
+                <p class="precio">10 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Productos para el hogar/Vasos_Plasticos_Polipak.png" alt="Vasos_Plasticos_Polipak">
+                <p class="nombre">Vasos Plásticos Polipak 12unds</p>
+                <p class="precio">25 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Productos para el hogar/Vasos_Desechables_Multipáck_25.png"
+                    alt="Vasos_Desechables_Multipáck_25">
+                <p class="nombre">Vasos Desechables Multipack 25unds</p>
+                <p class="precio">35 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Productos para el hogar/Platos_Plasticos_Polipak.png"
+                    alt="Platos_Plasticos_Polipak">
+                <p class="nombre">Platos Plásticos Polipak 12unds</p>
+                <p class="precio">25 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Productos para el hogar/Foco_Rayovac.png" alt="Foco_Rayovac">
+                <p class="nombre">Foco Rayovac</p>
+                <p class="precio">45 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Productos para el hogar/Baterias_Rayovac_AA_1.png" alt="Baterias_Rayovac_AA_1">
+                <p class="nombre">Baterias Rayovac AA Unidad</p>
+                <p class="precio">32 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Productos para el hogar/Baterias_Rayovac_AA_2.png" alt="Baterias_Rayovac_AA_2">
+                <p class="nombre">Baterias Rayovac AAA 2unds</p>
+                <p class="precio">31 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Productos para el hogar/Probolsa_Pequeña.png" alt="Probolsa_Pequeña">
+                <p class="nombre">Probolsa Pequeña</p>
+                <p class="precio">38 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Productos para el hogar/Pajillas_Termoencogibles.png"
+                    alt="Pajillas_Termoencogibles">
+                <p class="nombre">Pajillas TermEncogibles</p>
+                <p class="precio">35 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Productos para el hogar/Esponja_de_acero_Girasol.png"
+                    alt="Esponja_de_acero_Girasol">
+                <p class="nombre">Esponja de Acero Girasol Unidad</p>
+                <p class="precio">9 C$</p>
+            </div>
+        </div>
+
+    </section>
+
+    <!--FOOTER-->
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Columna 1 -->
+            <div class="footer-column">
+                <h2>Distribuidora Jireh</h2>
+                <h3>Contáctanos</h3>
+                <p>📱 Whats App<br><span>+502 8182-1278</span></p>
+                <p>📞 Llamanos<br><span>+502 8182-1278</span></p>
+            </div>
+
+            <!-- Columna 2 -->
+            <div class="footer-column">
+                <h3>Categorías Populares</h3>
+                <ul>
+                    <li><a href="./Index.html">Alimentos</a></li>
+                    <li><a href="./Bebidas.html">Bebidas</a></li>
+                    <li><a href="./ProductosLimpieza.html">Productos de Limpieza</a></li>
+                    <li><a href="./CuidadoPersonal.html">Cuidado Personal</a></li>
+                    <li><a href="./ProductosBasicos.html">Productos Básicos</a></li>
+                    <li><a href="./ProductosHogar.html">Productos para el Hogar</a></li>
+                    <li><a href="./Salud.html">Salud</a></li>
+                    <li><a href="./ArticulosBebe.html">Artículos para Bebés</a></li>
+                </ul>
+            </div>
+
+            <!-- Columna 3 -->
+            <div class="footer-column">
+                <h3>Customer Services</h3>
+                <ul>
+                    <li>Contáctanos</li>
+                    <li>Terms & Conditions</li>
+                    <li>FAQ</li>
+                    <li>Privacy Policy</li>
+                    <li>E-waste Policy</li>
+                    <li>Cancellation & Return Policy</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            © 2025 All rights reserved. Reliance Retail Ltd.
+        </div>
+    </footer>
+
+    <!--CARRITO DE COMPRAS-->
+    <div id="carrito-popup" class="carrito-popup oculto">
+        <h3>Carrito</h3>
+        <ul id="carrito-lista" class="carrito-lista"></ul>
+    </div>
+
+    <!--MENSAJE DE PRODUCTO AGREGADO AL CARRITO-->
+    <div id="mensaje-toast" class="toast oculto"></div>
+
+    <!--LOADER (PANTALLA DE CARGA)-->
+    <div id="loader" class="loader oculto">
+        <div class="loader-content">
+            <div class="spinner"></div>
+            <p class="loader-text">Cargando...</p>
+        </div>
+    </div>
+
+    <!--FAVORITOS POPUP-->
+    <div id="favoritos-popup" class="favoritos-popup oculto">
+        <h3>Favoritos</h3>
+        <ul id="favoritos-lista" class="favoritos-lista"></ul>
+    </div>
+
+    <script src="../js/global.js"></script>
+</body>
+
+</html>

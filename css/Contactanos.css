@@ -1,0 +1,57 @@
+.Contactanos {
+    background: linear-gradient(135deg, #b3e5fc, #4fc3f7);
+    color: #083c4c;
+    padding: 40px 20px;
+    border-radius: 16px;
+    margin: 40px 0;
+    /* solo margen arriba y abajo */
+    width: 100vw;
+    /* ancho completo de la ventana */
+    max-width: 100%;
+    /* sin límite máximo */
+    box-sizing: border-box;
+    /* para que el padding no expanda el ancho total */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.contactanos-contenido {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1200px;
+    /* para que no se vea muy estirado en pantallas gigantes */
+    margin: 0 auto;
+    /* centrar contenido */
+    box-sizing: border-box;
+}
+
+.contacto-info,
+.contacto-mapa {
+    flex: 1;
+    min-width: 300px;
+}
+
+.contacto-info h2,
+.contacto-mapa h2 {
+    font-size: 24px;
+    color: #0d47a1;
+    margin-bottom: 10px;
+}
+
+.contacto-info p {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.contacto-mapa iframe {
+    width: 100%;
+    height: 350px;
+    border: 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}

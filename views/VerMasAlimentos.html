@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/FiltradoTexto.css">
+    <title>Distribuidora Jireh</title>
+</head>
+
+<body>
+    <!--HEADER-->
+    <header>
+        <!--Logo Jireh-->
+        <div class="logo">
+            <img src="../images/Iconos/Logo.png" alt="logo Jireh" class="logo-img" />
+        </div>
+        <!--Barra Busqueda-->
+        <form>
+            <div class="search">
+                <span><img src="../images/Iconos/search.png" alt="Imagen Busqueda" /></span>
+                <input id="search-input" class="search-input" type="search" placeholder="Buscar">
+            </div>
+        </form>
+        <!--Links del Header-->
+        <nav class="header-nav">
+            <a href="./Index.html" class="header-link">Inicio</a>
+            <a href="./AcercaDe.html" class="header-link">Acerca de</a>
+            <a href="./Contactanos.html" class="header-link">Contáctanos</a>
+            <a href="./Login.html" class="header-link">Iniciar Sesión</a>
+            <a href="javascript:void(0)" id="favoritos-icon">
+                <img src="../images/Iconos/heart.png" alt="corazon-icon" />
+            </a>
+            <a href="javascript:void(0)" id="carrito-icon">
+                <img src="../images/Iconos/cart.png" alt="carrito-compras-icon" />
+            </a>
+
+            <a href="javascript:void(0)" id="usuario-icono">
+                <img src="../images/Iconos/user.png" alt="user-icon" />
+            </a>
+            <div id="usuario-info" class="usuario-info oculto">
+                <span id="usuario-texto"></span>
+                <button id="cerrar-usuario-info" class="cerrar-btn">&times;</button>
+            </div>
+        </nav>
+    </header>
+
+    <!--BOTONES CATEGORÍAS-->
+    <div class="category-menu">
+        <button class="category active" onclick="navegarConLoader('../views/Index.html')">Alimentos <img
+                src="../images/Iconos/down-arrow.png" /></button>
+        <button class="category" onclick="navegarConLoader('../views/Bebidas.html')">Bebidas <img
+                src="../images/Iconos/down-arrow.png" /></button>
+        <button class="category" onclick="navegarConLoader('../views/ProductosLimpieza.html')">Productos de Limpieza
+            <img src="../images/Iconos/down-arrow.png" /></button>
+        <button class="category" onclick="navegarConLoader('../views/CuidadoPersonal.html')">Cuidado Personal <img
+                src="../images/Iconos/down-arrow.png" /></button>
+        <button class="category" onclick="navegarConLoader('../views/ProductosBasicos.html')">Productos Básicos <img
+                src="../images/Iconos/down-arrow.png" /></button>
+        <button class="category" onclick="navegarConLoader('../views/ProductosHogar.html')">Productos para el Hogar <img
+                src="../images/Iconos/down-arrow.png" /></button>
+        <button class="category" onclick="navegarConLoader('../views/Salud.html')">Salud <img
+                src="../images/Iconos/down-arrow.png" /></button>
+        <button class="category" onclick="navegarConLoader('../views/ArticulosBebe.html')">Artículos para Bebés <img
+                src="../images/Iconos/down-arrow.png" /></button>
+    </div>
+
+    <!--BOTON MEJORES OFERTAS (CARRUSEL)-->
+    <section class="carrusel-container">
+        <div class="carrusel-track-wrapper">
+            <div class="carrusel-track">
+                <!--Productos del carrusel-->
+                <div class="carrusel-content">
+                    <div class="text-content">
+                        <p>Mejores Ofertas</p>
+                        <h2>Takis Fuego Sabor Intenso</h2>
+                        <p>A tan solo 20 C$</p>
+                    </div>
+                    <img src="../images/Alimentos/Takis.png" alt="Takis" class="product-image" />
+                </div>
+
+                <div class="carrusel-content">
+                    <div class="text-content">
+                        <p>Mejores Ofertas</p>
+                        <h2>Sardina La Sirena</h2>
+                        <p>A tan solo 50 C$</p>
+                    </div>
+                    <img src="../images/Alimentos/Sardina-La-Sirenita-Pica-Pica.png" alt="Sardina Sirena"
+                        class="product-image" />
+                </div>
+
+                <div class="carrusel-content">
+                    <div class="text-content">
+                        <p>Mejores Ofertas</p>
+                        <h2>Sopa Maruchan Ramen</h2>
+                        <p>A tan solo 25 C$</p>
+                    </div>
+                    <img src="../images/Alimentos/Sopa-Maruchan.png" alt="Maruchan" class="product-image" />
+                </div>
+
+                <div class="carrusel-content">
+                    <div class="text-content">
+                        <p>Mejores Ofertas</p>
+                        <h2>Galletas Marinela Sponch Fresa</h2>
+                        <p>A tan solo 18 C$</p>
+                    </div>
+                    <img src="../images/Alimentos/galletas sponch.png" alt="Galletas Sponch" class="product-image" />
+                </div>
+
+                <div class="carrusel-content">
+                    <div class="text-content">
+                        <p>Mejores Ofertas</p>
+                        <h2>Jalea de Guayaba D'Lago</h2>
+                        <p>A tan solo 27 C$</p>
+                    </div>
+                    <img src="../images/Alimentos/Jalea-De-Guayaba-Dlago.png" alt="Jalea Dlago" class="product-image" />
+                </div>
+            </div>
+        </div>
+
+        <div class="carrusel-button left">
+            <img src="../images/Iconos/left-chevron.png" />
+        </div>
+        <div class="carrusel-button right">
+            <img src="../images/Iconos/chevron.png" />
+        </div>
+
+        <!--Puntos de la zona inferior del carrusel-->
+        <div class="carrusel-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </section>
+
+    <!--SECTION DE LAS OFERTAS-->
+    <!--PRODUCTOS DESTACADOS ALIMENTOS-->
+    <section class="destacados">
+        <div class="destacados-header">
+            <h2>Todas las ofertas en alimentos</h2>
+        </div>
+
+        <div class="productos-grid">
+            <div class="producto">
+                <img src="../images/Alimentos/Sardina-La-Sirenita-Pica-Pica.png" alt="Sardina">
+                <p class="nombre">Sardina La Sirena en salsa de tomate picante</p>
+                <p class="precio">50 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Alimentos/atun.png" alt="Atún Calvo">
+                <p class="nombre">Atún en trozos Calvo en agua Light</p>
+                <p class="precio">40 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Alimentos/Pasta-Roma-Larga-Espaguetti.png" alt="Pasta Roma">
+                <p class="nombre">Pasta Roma Larga Spaguetti</p>
+                <p class="precio">25 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Alimentos/galleta_oreo.png" alt="Oreo">
+                <p class="nombre">Galleta Oreo Sandwich Chocolate Paquete</p>
+                <p class="precio">15 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Alimentos/JALAPEÑOS-MAX.png" alt="Snack Diana">
+                <p class="nombre">Snack Diana Jalapeños Max</p>
+                <p class="precio">10 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Alimentos/doritos.png" alt="Doritos">
+                <p class="nombre">Snack Doritos Nacho Atrevido 150g</p>
+                <p class="precio">8 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Alimentos/Sopa-Maruchan.png" alt="Sopa-Maruchan">
+                <p class="nombre">Sopa Maruchan Ramen 64g</p>
+                <p class="precio">25 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Alimentos/galletas sponch.png" alt="Galletas Sponch">
+                <p class="nombre">Galletas Marinela Sponch Fresa 360g</p>
+                <p class="precio">18 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Alimentos/Pasta-Sabemas-Canelon.png" alt="Pasta Pasta-Sabemas-Canelon">
+                <p class="nombre">Pasta Sabemas Canelón 250g</p>
+                <p class="precio">40 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Alimentos/Jalea-De-Guayaba-Dlago.png" alt="Jalea-De-Guayaba-Dlago">
+                <p class="nombre">Jalea de Guayaba D'Lago 250g</p>
+                <p class="precio">27 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Alimentos/Chetos.png" alt="Chetos Flamin Hoat">
+                <p class="nombre">Chetos Flamin' Hoat 145g</p>
+                <p class="precio">7 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Alimentos/Tortrix_Taco_Chile.png" alt="Tortrix_Taco_Chile">
+                <p class="nombre">Frituras Tortix Tacos Chile 91g</p>
+                <p class="precio">10 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Alimentos/Tortrix_Queso.png" alt="Tortrix_Queso">
+                <p class="nombre">Frituras Tortix Queso 91g</p>
+                <p class="precio">10 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Alimentos/Tortrix_Barbacoa.png" alt="Tortrix_Barbacoa">
+                <p class="nombre">Frituras Tortrix Barbacoa 91g</p>
+                <p class="precio">7 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Alimentos/CHURRITOS-MAX.png" alt="CHURRITOS-MAX">
+                <p class="nombre">Snack Diana Churritos Max 40g</p>
+                <p class="precio">10 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Alimentos/Atun Gaviota.png" alt="Atun Gaviota">
+                <p class="nombre">Atun Gaviota Lomo Trozos en Agua</p>
+                <p class="precio">60 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Alimentos/Galleta_Waffle.png" alt="Galleta_Waffle">
+                <p class="nombre">Galletas Gama Dulce Waffle Sabor Vainilla</p>
+                <p class="precio">8 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Alimentos/Galleta_Chocomad.png" alt="Galleta_Chocomad">
+                <p class="nombre">Galletas Can Can Chocomad</p>
+                <p class="precio">10 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Alimentos/Yucateca_Max.png" alt="Yucateca_Max">
+                <p class="nombre">Diana Yucatekas MAX con Vinagre 215g</p>
+                <p class="precio">10 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Alimentos/Pachanga_Mix.png" alt="Pachanga_Mix">
+                <p class="nombre">Snack Diana Pachanga Mix 115g</p>
+                <p class="precio">10 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Alimentos/Galletas_Chicky.png" alt="Galletas_Chicky">
+                <p class="nombre">Galletas Pozuelo Chicky Chocolate 153g</p>
+                <p class="precio">10 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Alimentos/Maruchan_Mi_Zzopita.png" alt="Maruchan_Mi_Zzopita">
+                <p class="nombre">Maruchan Mizzopita de Pollo 64g</p>
+                <p class="precio">25 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Alimentos/Takis.png" alt="Takis">
+                <p class="nombre">Takis Fuego Sabor Intenso</p>
+                <p class="precio">20 C$</p>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!--FOOTER-->
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Columna 1 -->
+            <div class="footer-column">
+                <h2>Distribuidora Jireh</h2>
+                <h3>Contáctanos</h3>
+                <p>📱 Whats App<br><span>+502 8182-1278</span></p>
+                <p>📞 Llamanos<br><span>+502 8182-1278</span></p>
+            </div>
+
+            <!-- Columna 2 -->
+            <div class="footer-column">
+                <h3>Categorías Populares</h3>
+                <ul>
+                    <li><a href="./Index.html">Alimentos</a></li>
+                    <li><a href="./Bebidas.html">Bebidas</a></li>
+                    <li><a href="./ProductosLimpieza.html">Productos de Limpieza</a></li>
+                    <li><a href="./CuidadoPersonal.html">Cuidado Personal</a></li>
+                    <li><a href="./ProductosBasicos.html">Productos Básicos</a></li>
+                    <li><a href="./ProductosHogar.html">Productos para el Hogar</a></li>
+                    <li><a href="./Salud.html">Salud</a></li>
+                    <li><a href="./ArticulosBebe.html">Artículos para Bebés</a></li>
+                </ul>
+            </div>
+
+            <!-- Columna 3 -->
+            <div class="footer-column">
+                <h3>Customer Services</h3>
+                <ul>
+                    <li>Contáctanos</li>
+                    <li>Terms & Conditions</li>
+                    <li>FAQ</li>
+                    <li>Privacy Policy</li>
+                    <li>E-waste Policy</li>
+                    <li>Cancellation & Return Policy</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            © 2025 All rights reserved. Reliance Retail Ltd.
+        </div>
+    </footer>
+
+    <!--CARRITO DE COMPRAS-->
+    <div id="carrito-popup" class="carrito-popup oculto">
+        <h3>Carrito</h3>
+        <ul id="carrito-lista" class="carrito-lista"></ul>
+    </div>
+
+    <!--MENSAJE DE PRODUCTO AGREGADO AL CARRITO-->
+    <div id="mensaje-toast" class="toast oculto"></div>
+
+    <!--LOADER (PANTALLA DE CARGA)-->
+    <div id="loader" class="loader oculto">
+        <div class="loader-content">
+            <div class="spinner"></div>
+            <p class="loader-text">Cargando...</p>
+        </div>
+    </div>
+
+    <!--FAVORITOS POPUP-->
+    <div id="favoritos-popup" class="favoritos-popup oculto">
+        <h3>Favoritos</h3>
+        <ul id="favoritos-lista" class="favoritos-lista"></ul>
+    </div>
+
+    <script src="../js/global.js"></script>
+</body>
+
+</html>

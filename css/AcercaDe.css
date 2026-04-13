@@ -1,0 +1,89 @@
+.InfoEmpresa {
+    background: linear-gradient(135deg, #b3e5fc, #4fc3f7);
+    /* degradado celeste */
+    padding: 30px 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    color: #083c4c;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 40px;
+    margin-top: 0px;
+}
+
+.info-texto {
+    flex: 1;
+    min-width: 280px;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.info-texto h3 {
+    margin-top: 20px;
+    color: #00796b;
+    /* verde azulado profesional */
+}
+
+
+.info-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+.info-logo {
+    margin-bottom: 30px;
+}
+
+.info-logo img {
+    max-width: 300px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.info-contenido {
+    text-align: left;
+}
+
+.info-contenido h2 {
+    font-size: 22px;
+    color: #007b8f;
+    margin-top: 28px;
+    margin-bottom: 10px;
+    border-left: 4px solid #007b8f;
+    padding-left: 12px;
+    font-weight: 600;
+}
+
+.info-contenido p {
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: justify;
+}
+
+/* Responsivo */
+@media screen and (max-width: 768px) {
+    .info-container {
+        padding: 20px;
+    }
+
+    .info-logo img {
+        max-width: 200px;
+    }
+
+    .info-contenido h2 {
+        font-size: 20px;
+    }
+
+    .info-contenido p {
+        font-size: 15px;
+    }
+}

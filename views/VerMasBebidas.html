@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/FiltradoTexto.css">
+    <title>Distribuidora Jireh</title>
+</head>
+
+<body>
+    <!--HEADER-->
+    <header>
+        <!--Logo Jireh-->
+        <div class="logo">
+            <img src="../images/Iconos/Logo.png" alt="logo Jireh" class="logo-img" />
+        </div>
+        <!--Barra Busqueda-->
+        <form>
+            <div class="search">
+                <span><img src="../images/Iconos/search.png" alt="Imagen Busqueda" /></span>
+                <input id="search-input" class="search-input" type="search" placeholder="Buscar">
+            </div>
+        </form>
+        <!--Links del Header-->
+        <nav class="header-nav">
+            <a href="./Index.html" class="header-link">Inicio</a>
+            <a href="./AcercaDe.html" class="header-link">Acerca de</a>
+            <a href="./Contactanos.html" class="header-link">Contáctanos</a>
+            <a href="./Login.html" class="header-link">Iniciar Sesión</a>
+            <a href="javascript:void(0)" id="favoritos-icon">
+                <img src="../images/Iconos/heart.png" alt="corazon-icon" />
+            </a>
+            <a href="javascript:void(0)" id="carrito-icon">
+                <img src="../images/Iconos/cart.png" alt="carrito-compras-icon" />
+            </a>
+            <a href="javascript:void(0)" id="usuario-icono">
+                <img src="../images/Iconos/user.png" alt="user-icon" />
+            </a>
+            <div id="usuario-info" class="usuario-info oculto">
+                <span id="usuario-texto"></span>
+                <button id="cerrar-usuario-info" class="cerrar-btn">&times;</button>
+            </div>
+        </nav>
+    </header>
+
+    <!--BOTONES CATEGORÍAS-->
+    <div class="category-menu">
+        <button class="category" onclick="navegarConLoader('../views/Index.html')">Alimentos <img
+                src="../images/Iconos/down-arrow.png" /></button>
+        <button class="category active" onclick="navegarConLoader('../views/Bebidas.html')">Bebidas <img
+                src="../images/Iconos/down-arrow.png" /></button>
+        <button class="category" onclick="navegarConLoader('../views/ProductosLimpieza.html')">Productos de Limpieza
+            <img src="../images/Iconos/down-arrow.png" /></button>
+        <button class="category" onclick="navegarConLoader('../views/CuidadoPersonal.html')">Cuidado Personal <img
+                src="../images/Iconos/down-arrow.png" /></button>
+        <button class="category" onclick="navegarConLoader('../views/ProductosBasicos.html')">Productos Básicos <img
+                src="../images/Iconos/down-arrow.png" /></button>
+        <button class="category" onclick="navegarConLoader('../views/ProductosHogar.html')">Productos para el Hogar <img
+                src="../images/Iconos/down-arrow.png" /></button>
+        <button class="category" onclick="navegarConLoader('../views/Salud.html')">Salud <img
+                src="../images/Iconos/down-arrow.png" /></button>
+        <button class="category" onclick="navegarConLoader('../views/ArticulosBebe.html')">Artículos para Bebés <img
+                src="../images/Iconos/down-arrow.png" /></button>
+    </div>
+
+    <!--BOTON MEJORES OFERTAS (CARRUSEL)-->
+    <section class="carrusel-container">
+        <div class="carrusel-track-wrapper">
+            <div class="carrusel-track">
+                <!--Productos del carrusel-->
+                <div class="carrusel-content">
+                    <div class="text-content">
+                        <p>Mejores Ofertas</p>
+                        <h2>Gaseosa Coca-Cola 2.5L</h2>
+                        <p>A tan solo 42 C$</p>
+                    </div>
+                    <img src="../images/Bebidas/Coca Cola.png" alt="Coca-Cola" class="product-image" />
+                </div>
+
+                <div class="carrusel-content">
+                    <div class="text-content">
+                        <p>Mejores Ofertas</p>
+                        <h2>Bebida Energética Jet 650ml</h2>
+                        <p>A tan solo 30 C$</p>
+                    </div>
+                    <img src="../images/Bebidas/jett.png" alt="Bebida Jett" class="product-image" />
+                </div>
+
+                <div class="carrusel-content">
+                    <div class="text-content">
+                        <p>Mejores Ofertas</p>
+                        <h2>Shakala Alimentos Ideal Unidad</h2>
+                        <p>A tan solo 17 C$</p>
+                    </div>
+                    <img src="../images/Bebidas/Shakalaka.png" alt="Shakalaka" class="product-image" />
+                </div>
+
+                <div class="carrusel-content">
+                    <div class="text-content">
+                        <p>Mejores Ofertas</p>
+                        <h2>Yogurt La Perfecta 200g</h2>
+                        <p>A tan solo 30 C$</p>
+                    </div>
+                    <img src="../images/Bebidas/Yogurt-La-Perfecta.png" alt="Yogurt-La-Perfecta"
+                        class="product-image" />
+                </div>
+
+                <div class="carrusel-content">
+                    <div class="text-content">
+                        <p>Mejores Ofertas</p>
+                        <h2>Jugo Kers de Nectar Manzana 330ml</h2>
+                        <p>A tan solo 22 C$</p>
+                    </div>
+                    <img src="../images/Bebidas/Jugos Kers.png" alt="Jugos Kers" class="product-image" />
+                </div>
+            </div>
+        </div>
+
+        <div class="carrusel-button left">
+            <img src="../images/Iconos/chevron.png" />
+        </div>
+        <div class="carrusel-button right">
+            <img src="../images/Iconos/chevron.png" />
+        </div>
+
+        <!--Puntos de la zona inferior del carrusel-->
+        <div class="carrusel-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </section>
+
+    <!--SECTION DE LAS OFERTAS-->
+    <!--PRODUCTOS DESTACADOS BEBIDAS-->
+    <section class="destacados">
+        <div class="destacados-header" style="align-items: center;">
+            <h2>Todas las ofertas en bebidas</h2>
+        </div>
+
+        <div class="productos-grid">
+            <div class="producto">
+                <img src="../images/Bebidas/Refresco-Gaseosa-Pepsi.png" alt="Gaseosa Pepsi">
+                <p class="nombre">Resfresco Gaseosa Pepsi 1250ml</p>
+                <p class="precio">30 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Bebidas/Kola Shaler.png" alt="Atún Calvo">
+                <p class="nombre">Refresco Kola Shaler 12oz</p>
+                <p class="precio">25 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Bebidas/Bebida-Gatorade.png" alt="Bebida-Gatorade">
+                <p class="nombre">Bebida Hidratante Gatorade 600ml</p>
+                <p class="precio">42 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Bebidas/Cifrut.png" alt="Cifrut">
+                <p class="nombre">Bebida Cifruit Fruit 2000ml</p>
+                <p class="precio">38 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Bebidas/Jugos Kers.png" alt="Jugos Kers">
+                <p class="nombre">Jugo Kers de Nectar Manzana 330ml</p>
+                <p class="precio">22 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Bebidas/jett.png" alt="Bebida Jet">
+                <p class="nombre">Bebida Energética Jet 650ml</p>
+                <p class="precio">30 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Bebidas/Suero-Electrolit.png" alt="Suero Electrolit">
+                <p class="nombre">Suero Electrolit 625ml</p>
+                <p class="precio">115 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Bebidas/Yogurt-La-Perfecta.png" alt="Yogurt-La-Perfecta">
+                <p class="nombre">Yogurt La Perfecta 200g</p>
+                <p class="precio">30 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Bebidas/Avena-Quaker.png" alt="Avena-Quaker">
+                <p class="nombre">Avena Quaker Mosh Nutremas</p>
+                <p class="precio">10 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Bebidas/Shakalaka.png" alt="Shakalaka">
+                <p class="nombre">Shaka Laka Alimentos Ideal</p>
+                <p class="precio">17 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Bebidas/Coca-Cola_355ml.png" alt="Coca-Cola">
+                <p class="nombre">Refresco Coca-Cola 355ml</p>
+                <p class="precio">30 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Bebidas/Prix-cola_2_litros.png" alt="Prix-cola_2_litros">
+                <p class="nombre">Refresco Gaseosa Prix Cola 2L</p>
+                <p class="precio">38 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Bebidas/Tang.png" alt="Tang">
+                <p class="nombre">Bebida en Polvo Tang 13g</p>
+                <p class="precio">10 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Bebidas/Jugo_tropical_mixto.png" alt="Jugo_tropical_mixto">
+                <p class="nombre">Refresco Tropical Mixto Frutas 350ml</p>
+                <p class="precio">20 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Bebidas/Zuko.png" alt="Zuko">
+                <p class="nombre">Bebida en Polvo Instantánea Zuko</p>
+                <p class="precio">10 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Bebidas/Delisoy_en_polvo.png" alt="Delisoy_en_polvo">
+                <p class="nombre">Bebida en Polvo Delisoya sin Lactosa</p>
+                <p class="precio">12 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Bebidas/Chocolate_delisoy_en_polvo.png" alt="Chocolate_delisoy_en_polvo">
+                <p class="nombre">Bebida en Polvo Delisoya Chocolate</p>
+                <p class="precio">13 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Bebidas/Avena Sasa en Polvo.png" alt="Avena Sasa en Polvo">
+                <p class="nombre">Avena Sasa Molida 400g</p>
+                <p class="precio">10 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Bebidas/Hic_Manzana.png" alt="Hic_Manzana">
+                <p class="nombre">Refresco Hi-C Manzana 250ml</p>
+                <p class="precio">22 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Bebidas/FruVita_Jugo_200ml.png" alt="FruVita_Jugo_200ml">
+                <p class="nombre">Jugos Nectar Fruvita 350ml</p>
+                <p class="precio">17 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Bebidas/Dfrutta-Jugo_355Ml.png" alt="Dfrutta-Jugo_355Ml">
+                <p class="nombre">D'Fruta Jugo 350ml</p>
+                <p class="precio">12 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Bebidas/Tropical_Manzana.png" alt="Tropical_Manzana">
+                <p class="nombre">Tropical Manzana 350ml</p>
+                <p class="precio">21 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Bebidas/jett.png" alt="Jett">
+                <p class="nombre">Bebida Enérgetica Jett 650ml</p>
+                <p class="precio">30 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Bebidas/Naturas-Lata.png" alt="Naturas-Lata">
+                <p class="nombre">Naturas Nectar Manzana Lata 330ml</p>
+                <p class="precio">22 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Bebidas/Bebida_Furry_Energizante.png" alt="Bebida_Furry_Energizante">
+                <p class="nombre">Bebida Energética Furry 500ml</p>
+                <p class="precio">25 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Bebidas/Fuente_Pura_1lt.png" alt="Fuente_Pura_1lt">
+                <p class="nombre">Fuente Pura Agua Botella 1Lt</p>
+                <p class="precio">30 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Bebidas/Coca Cola.png" alt="Coca Cola 2.5L">
+                <p class="nombre">Gaseosa Coca-Cola 2.5L</p>
+                <p class="precio">42 C$</p>
+            </div>
+        </div>
+    </section>
+
+    <!--FOOTER-->
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Columna 1 -->
+            <div class="footer-column">
+                <h2>Distribuidora Jireh</h2>
+                <h3>Contáctanos</h3>
+                <p>📱 Whats App<br><span>+502 8182-1278</span></p>
+                <p>📞 Llamanos<br><span>+502 8182-1278</span></p>
+            </div>
+
+            <!-- Columna 2 -->
+            <div class="footer-column">
+                <h3>Categorías Populares</h3>
+                <ul>
+                    <li><a href="./Index.html">Alimentos</a></li>
+                    <li><a href="./Bebidas.html">Bebidas</a></li>
+                    <li><a href="./ProductosLimpieza.html">Productos de Limpieza</a></li>
+                    <li><a href="./CuidadoPersonal.html">Cuidado Personal</a></li>
+                    <li><a href="./ProductosBasicos.html">Productos Básicos</a></li>
+                    <li><a href="./ProductosHogar.html">Productos para el Hogar</a></li>
+                    <li><a href="./Salud.html">Salud</a></li>
+                    <li><a href="./ArticulosBebe.html">Artículos para Bebés</a></li>
+                </ul>
+            </div>
+
+            <!-- Columna 3 -->
+            <div class="footer-column">
+                <h3>Customer Services</h3>
+                <ul>
+                    <li>Contáctanos</li>
+                    <li>Terms & Conditions</li>
+                    <li>FAQ</li>
+                    <li>Privacy Policy</li>
+                    <li>E-waste Policy</li>
+                    <li>Cancellation & Return Policy</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            © 2025 All rights reserved. Reliance Retail Ltd.
+        </div>
+    </footer>
+
+    <!--CARRITO DE COMPRAS-->
+    <div id="carrito-popup" class="carrito-popup oculto">
+        <h3>Carrito</h3>
+        <ul id="carrito-lista" class="carrito-lista"></ul>
+    </div>
+
+    <!--MENSAJE DE PRODUCTO AGREGADO AL CARRITO-->
+    <div id="mensaje-toast" class="toast oculto"></div>
+
+    <!--LOADER (PANTALLA DE CARGA)-->
+    <div id="loader" class="loader oculto">
+        <div class="loader-content">
+            <div class="spinner"></div>
+            <p class="loader-text">Cargando...</p>
+        </div>
+    </div>
+
+    <!--FAVORITOS POPUP-->
+    <div id="favoritos-popup" class="favoritos-popup oculto">
+        <h3>Favoritos</h3>
+        <ul id="favoritos-lista" class="favoritos-lista"></ul>
+    </div>
+
+    <script src="../js/global.js"></script>
+</body>
+
+</html>

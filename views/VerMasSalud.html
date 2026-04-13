@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/FiltradoTexto.css">
+    <title>Distribuidora Jireh</title>
+</head>
+
+<body>
+    <!--HEADER-->
+    <header>
+        <!--Logo Jireh-->
+        <div class="logo">
+            <img src="../images/Iconos/Logo.png" alt="logo Jireh" class="logo-img" />
+        </div>
+        <!--Barra Busqueda-->
+        <form>
+            <div class="search">
+                <span><img src="../images/Iconos/search.png" alt="Imagen Busqueda" /></span>
+                <input id="search-input" class="search-input" type="search" placeholder="Buscar">
+            </div>
+        </form>
+        <!--Links del Header-->
+        <nav class="header-nav">
+            <a href="./Index.html" class="header-link">Inicio</a>
+            <a href="./AcercaDe.html" class="header-link">Acerca de</a>
+            <a href="./Contactanos.html" class="header-link">Contáctanos</a>
+            <a href="./Login.html" class="header-link">Iniciar Sesión</a>
+            <a href="javascript:void(0)" id="favoritos-icon">
+                <img src="../images/Iconos/heart.png" alt="corazon-icon" />
+            </a>
+            <a href="javascript:void(0)" id="carrito-icon">
+                <img src="../images/Iconos/cart.png" alt="carrito-compras-icon" />
+            </a>
+            <a href="javascript:void(0)" id="usuario-icono">
+                <img src="../images/Iconos/user.png" alt="user-icon" />
+            </a>
+            <div id="usuario-info" class="usuario-info oculto">
+                <span id="usuario-texto"></span>
+                <button id="cerrar-usuario-info" class="cerrar-btn">&times;</button>
+            </div>
+        </nav>
+    </header>
+
+    <!--BOTONES CATEGORÍAS-->
+    <div class="category-menu">
+        <button class="category" onclick="navegarConLoader('../views/Index.html')">Alimentos <img
+                src="../images/Iconos/down-arrow.png" /></button>
+        <button class="category" onclick="navegarConLoader('../views/Bebidas.html')">Bebidas <img
+                src="../images/Iconos/down-arrow.png" /></button>
+        <button class="category" onclick="navegarConLoader('../views/ProductosLimpieza.html')">Productos de Limpieza
+            <img src="../images/Iconos/down-arrow.png" /></button>
+        <button class="category" onclick="navegarConLoader('../views/CuidadoPersonal.html')">Cuidado Personal <img
+                src="../images/Iconos/down-arrow.png" /></button>
+        <button class="category" onclick="navegarConLoader('../views/ProductosBasicos.html')">Productos Básicos <img
+                src="../images/Iconos/down-arrow.png" /></button>
+        <button class="category" onclick="navegarConLoader('../views/ProductosHogar.html')">Productos para el Hogar <img
+                src="../images/Iconos/down-arrow.png" /></button>
+        <button class="category active" onclick="navegarConLoader('../views/Salud.html')">Salud <img
+                src="../images/Iconos/down-arrow.png" /></button>
+        <button class="category" onclick="navegarConLoader('../views/ArticulosBebe.html')">Artículos para Bebés <img
+                src="../images/Iconos/down-arrow.png" /></button>
+    </div>
+
+    <!--BOTON MEJORES OFERTAS (CARRUSEL)-->
+    <section class="carrusel-container">
+        <div class="carrusel-track-wrapper">
+            <div class="carrusel-track">
+                <!--Productos del carrusel-->
+                <div class="carrusel-content">
+                    <div class="text-content">
+                        <p>Mejores Ofertas</p>
+                        <h2>Dolofin Adulto Karnel Tabletas</h2>
+                        <p>A tan solo 6 C$</p>
+                    </div>
+                    <img src="../images/Salud/Dolofin.png" alt="Dolofin" class="product-image" />
+                </div>
+
+                <div class="carrusel-content">
+                    <div class="text-content">
+                        <p>Mejores Ofertas</p>
+                        <h2>Alka Seltzer Tabletas</h2>
+                        <p>A tan solo 7 C$</p>
+                    </div>
+                    <img src="../images/Salud/Alka-Seltzerw.png" alt="Alka-Seltzerw" class="product-image" />
+                </div>
+
+                <div class="carrusel-content">
+                    <div class="text-content">
+                        <p>Mejores Ofertas</p>
+                        <h2>Amoxicilina 500mg Capsulas</h2>
+                        <p>A tan solo 5 C$</p>
+                    </div>
+                    <img src="../images/Salud/Amoxicilina.png" alt="Amoxicilinas" class="product-image" />
+                </div>
+
+                <div class="carrusel-content">
+                    <div class="text-content">
+                        <p>Mejores Ofertas</p>
+                        <h2>Vick Vaporub Tarro 50grs</h2>
+                        <p>A tan solo 52 C$</p>
+                    </div>
+                    <img src="../images/Salud/Vick Vaporub.png" alt="Vick Vaporub" class="product-image" />
+                </div>
+
+                <div class="carrusel-content">
+                    <div class="text-content">
+                        <p>Mejores Ofertas</p>
+                        <h2>Dorival 200mg Tabletas</h2>
+                        <p>A tan solo 4 C$</p>
+                    </div>
+                    <img src="../images/Salud/Dorival.png" alt="Dorival" class="product-image" />
+                </div>
+            </div>
+        </div>
+
+        <div class="carrusel-button left">
+            <img src="../images/Iconos/left-chevron.png" />
+        </div>
+        <div class="carrusel-button right">
+            <img src="../images/Iconos/chevron.png" />
+        </div>
+
+        <!--Puntos de la zona inferior del carrusel-->
+        <div class="carrusel-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </section>
+
+    <!--SECTION DE LAS OFERTAS-->
+    <!--PRODUCTOS DESTACADOS PRODUCTOS PARA LA SALUD-->
+    <section class="destacados">
+        <div class="destacados-header">
+            <h2>Consigue todas las ofertas en productos para la salud</h2>
+        </div>
+
+        <div class="productos-grid">
+            <div class="producto">
+                <img src="../images/Salud/Dolo-Vitalgia.png" alt="Dolo-Vitalgia">
+                <p class="nombre">Dolo-Vitalgia Tabletas</p>
+                <p class="precio">8 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Salud/Omeprazol.png" alt="Omeprazol">
+                <p class=" nombre">Omeprazol 20mg Cápsulas</p>
+                <p class="precio">3 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Salud/Dolofin.png" alt="Dolofin">
+                <p class="nombre">Dolofin Adulto Karnel Tabletas</p>
+                <p class="precio">6 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Salud/Acetaminofen.png" alt="Acetaminofen">
+                <p class="nombre">Acetaminofen 500g Tabletas</p>
+                <p class="precio">3 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Salud/Viro_Grip.png" alt="Viro_Grip">
+                <p class="nombre">Viro-Grip Dia Capsula Gel Sobre</p>
+                <p class="precio">13 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Salud/Alka-Seltzerw.png" alt="Alka-Seltzerw">
+                <p class="nombre">Alka Seltzer Tabletas</p>
+                <p class="precio">7 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Salud/Novalgina.png" alt="Novalgina">
+                <p class="nombre">Novalgina 500mg Tabletas</p>
+                <p class="precio">3 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Salud/Pepto_Bismo.png" alt="Pepto_Bismo">
+                <p class="nombre">Pepto Bismol 262mg Tabletas Masticable</p>
+                <p class="precio">3 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Salud/Amoxicilina.png" alt="Amoxicilina">
+                <p class="nombre">Amoxicilina 500mg Capsulas</p>
+                <p class="precio">5 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Salud/Zepol.png" alt="Zepol">
+                <p class="nombre">Zepol Adulto 30grs</p>
+                <p class="precio">56 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Salud/Ancalmo_Suero_Oral.png" alt="Ancalmo_Suero_Oral">
+                <p class="nombre">Ancalmo Suero Oral Fresa Sobre</p>
+                <p class="precio">5 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Salud/Actimicina-Gripe-Y-Tos.png" alt="Actimicina-Gripe-Y-Tos">
+                <p class="nombre">Actimicina Gripe y Tos Tabletas</p>
+                <p class="precio">13 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Salud/Memantin_10_mg.png" alt="Memantin_10_mg">
+                <p class="nombre">Memantin 10mg Tabletas</p>
+                <p class="precio">14 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Salud/LANSOPRAZOL.png" alt="LANSOPRAZOL">
+                <p class="nombre">Calox Lansoprazol 30mg Capsulas</p>
+                <p class="precio">6 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Salud/Vick Vaporub.png" alt="Vick Vaporub">
+                <p class="nombre">Vick Vaporub Tarro 50grs</p>
+                <p class="precio">52 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Salud/Tabcin-Dia.png" alt="Tabcin-Dia">
+                <p class="nombre">Tabcin Dia Capsula Gel</p>
+                <p class="precio">16 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Salud/Dorival.png" alt="Dorival">
+                <p class="nombre">Dorival 200mg Tabletas</p>
+                <p class="precio">4 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Salud/Delor_Antigripal.png" alt="Delor_Antigripal">
+                <p class="nombre">Delor Antigripal Tabletas</p>
+                <p class="precio">5 C$</p>
+            </div>
+        </div>
+    </section>
+
+    <!--FOOTER-->
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Columna 1 -->
+            <div class="footer-column">
+                <h2>Distribuidora Jireh</h2>
+                <h3>Contáctanos</h3>
+                <p>📱 Whats App<br><span>+502 8182-1278</span></p>
+                <p>📞 Llamanos<br><span>+502 8182-1278</span></p>
+            </div>
+
+            <!-- Columna 2 -->
+            <div class="footer-column">
+                <h3>Categorías Populares</h3>
+                <ul>
+                    <li><a href="./Index.html">Alimentos</a></li>
+                    <li><a href="./Bebidas.html">Bebidas</a></li>
+                    <li><a href="./ProductosLimpieza.html">Productos de Limpieza</a></li>
+                    <li><a href="./CuidadoPersonal.html">Cuidado Personal</a></li>
+                    <li><a href="./ProductosBasicos.html">Productos Básicos</a></li>
+                    <li><a href="./ProductosHogar.html">Productos para el Hogar</a></li>
+                    <li><a href="./Salud.html">Salud</a></li>
+                    <li><a href="./ArticulosBebe.html">Artículos para Bebés</a></li>
+                </ul>
+            </div>
+
+            <!-- Columna 3 -->
+            <div class="footer-column">
+                <h3>Customer Services</h3>
+                <ul>
+                    <li>Contáctanos</li>
+                    <li>Terms & Conditions</li>
+                    <li>FAQ</li>
+                    <li>Privacy Policy</li>
+                    <li>E-waste Policy</li>
+                    <li>Cancellation & Return Policy</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            © 2025 All rights reserved. Reliance Retail Ltd.
+        </div>
+    </footer>
+
+    <!--CARRITO DE COMPRAS-->
+    <div id="carrito-popup" class="carrito-popup oculto">
+        <h3>Carrito</h3>
+        <ul id="carrito-lista" class="carrito-lista"></ul>
+    </div>
+
+    <!--MENSAJE DE PRODUCTO AGREGADO AL CARRITO-->
+    <div id="mensaje-toast" class="toast oculto"></div>
+
+    <!--LOADER (PANTALLA DE CARGA)-->
+    <div id="loader" class="loader oculto">
+        <div class="loader-content">
+            <div class="spinner"></div>
+            <p class="loader-text">Cargando...</p>
+        </div>
+    </div>
+
+    <!--FAVORITOS POPUP-->
+    <div id="favoritos-popup" class="favoritos-popup oculto">
+        <h3>Favoritos</h3>
+        <ul id="favoritos-lista" class="favoritos-lista"></ul>
+    </div>
+
+    <script src="../js/global.js"></script>
+</body>
+
+</html>

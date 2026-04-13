@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/FiltradoTexto.css">
+    <title>Distribuidora Jireh</title>
+</head>
+
+<body>
+    <!--HEADER-->
+    <header>
+        <!--Logo Jireh-->
+        <div class="logo">
+            <img src="../images/Iconos/Logo.png" alt="logo Jireh" class="logo-img" />
+        </div>
+        <!--Barra Busqueda-->
+        <form>
+            <div class="search">
+                <span><img src="../images/Iconos/search.png" alt="Imagen Busqueda" /></span>
+                <input id="search-input" class="search-input" type="search" placeholder="Buscar">
+            </div>
+        </form>
+        <!--Links del Header-->
+        <nav class="header-nav">
+            <a href="./Index.html" class="header-link">Inicio</a>
+            <a href="./AcercaDe.html" class="header-link">Acerca de</a>
+            <a href="./Contactanos.html" class="header-link">Contáctanos</a>
+            <a href="./Login.html" class="header-link">Iniciar Sesión</a>
+            <a href="javascript:void(0)" id="favoritos-icon">
+                <img src="../images/Iconos/heart.png" alt="corazon-icon" />
+            </a>
+            <a href="javascript:void(0)" id="carrito-icon">
+                <img src="../images/Iconos/cart.png" alt="carrito-compras-icon" />
+            </a>
+            <a href="javascript:void(0)" id="usuario-icono">
+                <img src="../images/Iconos/user.png" alt="user-icon" />
+            </a>
+            <div id="usuario-info" class="usuario-info oculto">
+                <span id="usuario-texto"></span>
+                <button id="cerrar-usuario-info" class="cerrar-btn">&times;</button>
+            </div>
+        </nav>
+    </header>
+
+    <!--BOTONES CATEGORÍAS-->
+    <div class="category-menu">
+        <button class="category" onclick="navegarConLoader('../views/Index.html')">Alimentos <img
+                src="../images/Iconos/down-arrow.png" /></button>
+        <button class="category" onclick="navegarConLoader('../views/Bebidas.html')">Bebidas <img
+                src="../images/Iconos/down-arrow.png" /></button>
+        <button class="category" onclick="navegarConLoader('../views/ProductosLimpieza.html')">Productos de Limpieza
+            <img src="../images/Iconos/down-arrow.png" /></button>
+        <button class="category active" onclick="navegarConLoader('../views/CuidadoPersonal.html')">Cuidado Personal
+            <img src="../images/Iconos/down-arrow.png" /></button>
+        <button class="category" onclick="navegarConLoader('../views/ProductosBasicos.html')">Productos Básicos <img
+                src="../images/Iconos/down-arrow.png" /></button>
+        <button class="category" onclick="navegarConLoader('../views/ProductosHogar.html')">Productos para el Hogar <img
+                src="../images/Iconos/down-arrow.png" /></button>
+        <button class="category" onclick="navegarConLoader('../views/Salud.html')">Salud <img
+                src="../images/Iconos/down-arrow.png" /></button>
+        <button class="category" onclick="navegarConLoader('../views/ArticulosBebe.html')">Artículos para Bebés <img
+                src="../images/Iconos/down-arrow.png" /></button>
+    </div>
+
+    <!--BOTON MEJORES OFERTAS (CARRUSEL)-->
+    <section class="carrusel-container">
+        <div class="carrusel-track-wrapper">
+            <div class="carrusel-track">
+                <!--Productos del carrusel-->
+                <div class="carrusel-content">
+                    <div class="text-content">
+                        <p>Mejores Ofertas</p>
+                        <h2>Desodorante Axe 45g</h2>
+                        <p>A tan solo 98 C$</p>
+                    </div>
+                    <img src="../images/Cuidado Personal/Body-Spray-Axe.png" alt="Body-Spray-Axe"
+                        class="product-image" />
+                </div>
+
+                <div class="carrusel-content">
+                    <div class="text-content">
+                        <p>Mejores Ofertas</p>
+                        <h2>Shampoo Dove Óleo Nutrición 200ml</h2>
+                        <p>A tan solo 120 C$</p>
+                    </div>
+                    <img src="../images/Cuidado Personal/Dove-Shampoo.png" alt="Dove-Shampoo" class="product-image" />
+                </div>
+
+                <div class="carrusel-content">
+                    <div class="text-content">
+                        <p>Mejores Ofertas</p>
+                        <h2>Jabon DK12</h2>
+                        <p>A tan solo 22 C$</p>
+                    </div>
+                    <img src="../images/Cuidado Personal/Jabon_DK12.png" alt="Jabon_DK12" class="product-image" />
+                </div>
+
+                <div class="carrusel-content">
+                    <div class="text-content">
+                        <p>Mejores Ofertas</p>
+                        <h2>Cepillos Colgate Triple Acción</h2>
+                        <p>A tan solo 40 C$</p>
+                    </div>
+                    <img src="../images/Cuidado Personal/Cepillo_Colgate.png" alt="Cepillo_Colgate"
+                        class="product-image" />
+                </div>
+
+                <div class="carrusel-content">
+                    <div class="text-content">
+                        <p>Mejores Ofertas</p>
+                        <h2>Shampoo Bioland 1000ml</h2>
+                        <p>A tan solo 320 C$</p>
+                    </div>
+                    <img src="../images/Cuidado Personal/Shampoo-Bioland.png" alt="Shampoo-Bioland"
+                        class="product-image" />
+                </div>
+            </div>
+        </div>
+
+        <div class="carrusel-button left">
+            <img src="../images/Iconos/left-chevron.png" />
+        </div>
+        <div class="carrusel-button right">
+            <img src="../images/Iconos/chevron.png" />
+        </div>
+
+        <!--Puntos de la zona inferior del carrusel-->
+        <div class="carrusel-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </section>
+
+    <!--SECTION DE LAS OFERTAS-->
+    <!--PRODUCTOS DESTACADOS PRODUCTOS DE CUIDADO PERSONAL-->
+    <section class="destacados">
+        <div class="destacados-header">
+            <h2>Consigue todas las ofertas en productos de cuidado personal</h2>
+        </div>
+
+        <div class="productos-grid">
+            <div class="producto">
+                <img src="../images/Cuidado Personal/Body-Spray-Axe.png" alt="Desodorante Axe">
+                <p class="nombre">Desodorante Axe 45g</p>
+                <p class="precio">98 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Cuidado Personal/Kotex.png" alt="Kotex">
+                <p class="nombre">Toallas Femeninas Kotex Nocturna</p>
+                <p class="precio">46 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Cuidado Personal/gel-ego.png" alt="Gel Ego">
+                <p class="nombre">Gel Fijador Ego Power 110ml</p>
+                <p class="precio">25 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Cuidado Personal/Dove-Shampoo.png" alt="Shampoo Dove">
+                <p class="nombre">Shampoo Dove Óleo Nutrición 200ml</p>
+                <p class="precio">120 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Cuidado Personal/jabon palmolive.png" alt="Jabon Palmolive">
+                <p class="nombre">Jabón en Barra Humectante Palmolive</p>
+                <p class="precio">33 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Cuidado Personal/Sedal_Champoo_Bolsita.png" alt="Sedal_Champoo_Bolsita">
+                <p class="nombre">Sedal Shampoo Bolsita Unidad</p>
+                <p class="precio">6 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Cuidado Personal/Shampoo_Savile_Bolsita.png" alt="Shampoo_Savile_Bolsita">
+                <p class="nombre">Savilé Shampoo Bolsita Unidad</p>
+                <p class="precio">7 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Cuidado Personal/Pantene_Crema_para_peinar_Bolsita.png" alt="Crema Pantene Bolsita">
+                <p class="nombre">Crema Pantene para Peinar Bolsita Unidad</p>
+                <p class="precio">7 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Cuidado Personal/Jabon_Dove.png" alt="Jabon_Dove">
+                <p class="nombre">Jabon Dove</p>
+                <p class="precio">70 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Cuidado Personal/jabon palmolive.png" alt="Jabon Palmolive">
+                <p class="nombre">Jabon Palmolive</p>
+                <p class="precio">33 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Cuidado Personal/Jabon_DK12.png" alt="Jabon_DK12">
+                <p class="nombre">Jabon DK12</p>
+                <p class="precio">22 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Cuidado Personal/Jabon_Antibacterial_Dove.png" alt="Jabon_Antibacterial_Dove">
+                <p class="nombre">Jabon Antibacterial Dove</p>
+                <p class="precio">22 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Cuidado Personal/Cepillo_Colgate.png" alt="Cepillo_Colgate">
+                <p class="nombre">Cepillos Colgate Unidad</p>
+                <p class="precio">30 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Cuidado Personal/Dove-Shampoo.png" alt="Shampoo Dove">
+                <p class="nombre">Shampoo Dove 200ml</p>
+                <p class="precio">120 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Cuidado Personal/Colgate_Triple_Accion.png" alt="Colgate_Triple_Accion">
+                <p class="nombre">Cepillos Colgate Triple Accion</p>
+                <p class="precio">40 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Cuidado Personal/Shampoo-Bioland.png" alt="Shampoo-Bioland">
+                <p class="nombre">Shampoo Bioland 1000ml</p>
+                <p class="precio">320 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Cuidado Personal/Crema_Sedal_300ml.png" alt="Crema_Sedal_300ml">
+                <p class="nombre">Crema Sedal 300ml</p>
+                <p class="precio">120 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Cuidado Personal/Crema_Ponds_50g.png" alt="Crema_Ponds_50g">
+                <p class="nombre">Crema Pond's 50g</p>
+                <p class="precio">69 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Cuidado Personal/Shampoo_Calypso_830ml.png" alt="Shampoo_Calypso_830ml">
+                <p class="nombre">Shampoo Calypso 830ml</p>
+                <p class="precio">115 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Cuidado Personal/Gel_Barber_Style_200g.png" alt="Gel_Barber_Style_200g">
+                <p class="nombre">Gel Barber Style 200g</p>
+                <p class="precio">52 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Cuidado Personal/Desodorante_Rexona_45g.png" alt="Desodorante_Rexona_45g">
+                <p class="nombre">Desodorante Rexona 45g</p>
+                <p class="precio">93 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Cuidado Personal/Desodorante_speed_stick_8g_gel.png"
+                    alt="Desodorante_speed_stick_8g_gel">
+                <p class="nombre">Desodorante Gel Speed Stick 8g</p>
+                <p class="precio">14 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Cuidado Personal/Perma_Sharp.png" alt="Perma_Sharp">
+                <p class="nombre">Perma Sharp</p>
+                <p class="precio">18 C$</p>
+            </div>
+
+            <div class="producto">
+                <img src="../images/Cuidado Personal/Saba.png" alt="Saba">
+                <p class="nombre">Toallas Femeninas Saba Nocturna 8 unds</p>
+                <p class="precio">60 C$</p>
+            </div>
+        </div>
+
+    </section>
+
+    <!--FOOTER-->
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Columna 1 -->
+            <div class="footer-column">
+                <h2>Distribuidora Jireh</h2>
+                <h3>Contáctanos</h3>
+                <p>📱 Whats App<br><span>+502 8182-1278</span></p>
+                <p>📞 Llamanos<br><span>+502 8182-1278</span></p>
+            </div>
+
+            <!-- Columna 2 -->
+            <div class="footer-column">
+                <h3>Categorías Populares</h3>
+                <ul>
+                    <li><a href="./Index.html">Alimentos</a></li>
+                    <li><a href="./Bebidas.html">Bebidas</a></li>
+                    <li><a href="./ProductosLimpieza.html">Productos de Limpieza</a></li>
+                    <li><a href="./CuidadoPersonal.html">Cuidado Personal</a></li>
+                    <li><a href="./ProductosBasicos.html">Productos Básicos</a></li>
+                    <li><a href="./ProductosHogar.html">Productos para el Hogar</a></li>
+                    <li><a href="./Salud.html">Salud</a></li>
+                    <li><a href="./ArticulosBebe.html">Artículos para Bebés</a></li>
+                </ul>
+            </div>
+
+            <!-- Columna 3 -->
+            <div class="footer-column">
+                <h3>Customer Services</h3>
+                <ul>
+                    <li>Contáctanos</li>
+                    <li>Terms & Conditions</li>
+                    <li>FAQ</li>
+                    <li>Privacy Policy</li>
+                    <li>E-waste Policy</li>
+                    <li>Cancellation & Return Policy</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            © 2025 All rights reserved. Reliance Retail Ltd.
+        </div>
+    </footer>
+
+    <!--CARRITO DE COMPRAS-->
+    <div id="carrito-popup" class="carrito-popup oculto">
+        <h3>Carrito</h3>
+        <ul id="carrito-lista" class="carrito-lista"></ul>
+    </div>
+
+    <!--MENSAJE DE PRODUCTO AGREGADO AL CARRITO-->
+    <div id="mensaje-toast" class="toast oculto"></div>
+
+    <!--LOADER (PANTALLA DE CARGA)-->
+    <div id="loader" class="loader oculto">
+        <div class="loader-content">
+            <div class="spinner"></div>
+            <p class="loader-text">Cargando...</p>
+        </div>
+    </div>
+
+    <!--FAVORITOS POPUP-->
+    <div id="favoritos-popup" class="favoritos-popup oculto">
+        <h3>Favoritos</h3>
+        <ul id="favoritos-lista" class="favoritos-lista"></ul>
+    </div>
+
+    <script src="../js/global.js"></script>
+</body>
+
+</html>
